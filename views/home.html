@@ -1,0 +1,120 @@
+    <style>
+        #checkOne{
+            display: inline-block;
+        }
+        #checkTwo{
+            display: inline-block;
+        }
+        #continue{
+
+        }
+    </style>
+<div id="firstDisplay" >
+<!--ng-controller="armsController as aCtrl">-->
+    <center>
+
+            
+             <!--action="#/views/enter.html">-->
+
+                <input ng-model="aCtrl.gunModel" class="inputClass" type="text" name="model" placeholder=" Search Model..." : />
+                <br>
+                <input ng-model="aCtrl.lowestPrice" class="inputClass" type="number" name="lPrice" placeholder=" Lowest Price" : />
+                <input ng-model="aCtrl.highestPrice" class="inputClass" type="number" name="hPrice" placeholder=" Highest Price"  />
+                <br>
+                <br>
+                <input ng-model ="aCtrl.location" class="inputClass" type="text" placeholder=" Location (optional)" :/>
+                <input ng-model="aCtrl.distance" class="inputClass" type="number" placeholder=" Distance (in miles)" />
+                <br>
+                <br>
+                <h3 id="select"><span>Recieve Updates from Following Websites:</span></h3>
+                <center>
+                    <section id="checkBoxes">
+                    <!--<div id = "checkOne"> -->
+                        <label> Gunbroker</label>
+                    <input ng-model="aCtrl.Gunbroker" type="checkbox" name="check" value="local"><label class="check">
+                        <label> GunsAmerica</label>
+                    <input ng-model="aCtrl.GunsAmerica" type="checkbox" name="check" value="local"><label class="check">
+                        <label>ARMSLIST</label>
+                    <input ng-model="aCtrl.ARMSLIST" type="checkbox" name="check" value="local"><label class="check"> 
+                        <label>GunListing</label> 
+                    <input ng-model="aCtrl.GunListing" type="checkbox" name="check" value="local"><label class="check"> 
+                    <!-- </div>
+                    <br>
+                    <div id = "checkTwo"> -->
+                        <br>
+                        <label>ShooterSwap</label> 
+                    <input ng-model="aCtrl.ShooterSwap" type="checkbox" name="check" value="local"><label class="check"> 
+                        <label>J&G Sales</label> 
+                    <input ng-model="aCtrl.JGSales" type="checkbox" name="check" value="local"><label class="check"> 
+                    <label>BuyUsedGuns</label> 
+                    <input ng-model="aCtrl.BuyUsedGuns" type="checkbox" name="check" value="local"><label class="check"> 
+                    <label>BudsGunShop</label>  
+                    <input ng-model="aCtrl.BudsGunShop" type="checkbox" name="check" value="local"><label class="check"> 
+                    
+                    </div>
+                    </section>
+                    <br>
+                    <button id="continue" name="inputOne" ng-click="aCtrl.saveData()">Continue</button>
+                    <br>
+                    <br>
+                    <br>
+ 
+                    
+                    </center>
+                    </div>
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--      <div id="firstDisplay" ng-controller="armsController as aCtrl">
+        <center>
+            <form method="link" action="/views/enter.html">
+
+                <input class="inputClass" type="text" placeholder=" Search Model..." : ng-localstorage />
+                <br>
+                <input class="inputClass" type="number" placeholder=" Lowest Price" : ng-localstorage />
+                <input class="inputClass" type="number" placeholder=" Highest Price" ng-localstorage />
+                <br>
+                <br>
+                <input class="inputClass" type="text" placeholder=" Location (optional)" : ng-localstorage />
+                <input class="inputClass" type="number" placeholder=" Distance (in miles)" ng-localstorage />
+                <br>
+                <br>
+                <h3 id="select"><span>Recieve Updates from Folling Websites:</span></h3>
+                <center>
+                    <button class="site" type="submit">GunBroker</button>
+                    <button class="site" type="submit">GunsAmerica</button>
+                    <button class="site" type="submit">ARMSLIST</button>
+                    <button class="site" type="submit">GunListing</button>
+                    <br>
+                    <button class="site" type="submit">Shooter Swap</button>
+                    <button class="site" type="submit">J&G Sales</button>
+                    <button class="site" type="submit">BuyUsedGuns</button>
+                    <button class="site" type="submit">Buds Gun Shop</button>
+                    <br>
+                    <br>
+                    <br>
+                    <!--		 <input type="checkbox" name="check" value="local"><p id="check"> Only update to Arms-Alert</p> -->
+      <!--              <button id="continue" type="submit">Continue</button>
+            </form>
+            </center>
+        </div>-->

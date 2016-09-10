@@ -1,0 +1,17 @@
+            .galleryDiv {
+                background-color: brown;
+                border: 4px solid black;
+                border-radius: .5em;
+                height: 260px;
+                padding: 5px;
+                width:  180px;
+                box-sizing: border-box;
+                margin: 20px;
+                float: left;
+            }
+            .model {
+                margin: 0 0 10px 0;
+            }
+            #image {
+                width: 100px;
+            }

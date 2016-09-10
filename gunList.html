@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="gunList">
+
+<head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="gunList.js"></script>
+    <!--        <link href="/midtermPractice.css" rel="stylesheet">-->
+    <style>
+        #galleryId {
+            background-color: grey;
+            border: 4px solid #556B2f;
+           /* border-radius: .5em;*/
+            height: absolute;
+            padding: 5px;
+            width: absolute;
+            box-sizing: border-box;
+            margin: 20px;
+            float: left;
+        }
+        
+        .model {
+            margin: 0 0 10px 0;
+        }
+        
+        #image {
+            width: 300px;
+        }
+        #armsAlert {
+            background-color: grey;
+        }
+    </style>
+    <title>Arms List</title>
+</head>
+
+<body id="armsAlert">
+
+    <div class="section1" ng-controller="inputController as gCtrl">
+        <form ng-submit="gCtrl.addArms()">
+                <center>
+            <h1></h1>
+            <a href="/midterm.html">Back</a>
+                </center>
+            <hr>
+            <input type="text" placeholder="Model" ng-model="gCtrl.newArms.model" />
+            <input type="text" placeholder="Image URL" ng-model="gCtrl.newArms.image"/>
+            <input type="number" placeholder="Price" ng-model="gCtrl.newArms.price" />
+            <input type="text" placeholder="Caliber" ng-model="gCtrl.newArms.caliber" />
+            
+            <input type="submit" value="Add Firearm"/>
+        </form>
+    </div>
+    <hr>
+
+    <section id="galleryId" ng-controller="galleryController as lCtrl">
+            <center>
+        <div id="galleryDiv" ng-repeat="gun in lCtrl.arms">
+
+            <h3 class="model">{{ gun.model }}</h3>
+            <img id="image" ng-src="{{gun.image}}">
+            <h4 class="text"> {{gun.price | currency: '$' }}</h4>
+            <h4 class="number"> Caliber: {{gun.caliber}}</h4>
+        </div>
+        <br>
+            </center>
+    </section>
+
+    </body>
+    <html>
